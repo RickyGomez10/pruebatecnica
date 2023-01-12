@@ -5,7 +5,7 @@ type (
 		GetByTypeAndDateRange(request DiasFestivosRequest) DiasFestivos
 	}
 	DiasFestivosRepository interface {
-		GetData() []DiasFestivos
+		GetData() DiasFestivosResponse
 	}
 	DiasFestivosResponse struct {
 		Status string         `json:"status"`

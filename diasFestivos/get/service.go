@@ -3,19 +3,17 @@ package get
 import (
 	"go.uber.org/zap"
 	"pruebatecnica.com/diasFestivos"
-	"pruebatecnica.com/diasFestivos/platform/storage/repository"
 	"time"
 )
 
 type (
 	DiasFestivosService struct {
-		repository *repository.Repository
+		repository diasFestivos.DiasFestivosRepository
 		logger     *zap.Logger
 	}
 )
 
-func NewDiasFestivosService(repository *repository.Repository, logger *zap.Logger) *DiasFestivosService {
-
+func NewDiasFestivosService(repository diasFestivos.DiasFestivosRepository, logger *zap.Logger) *DiasFestivosService {
 	return &DiasFestivosService{
 		repository: repository,
 		logger:     logger,
